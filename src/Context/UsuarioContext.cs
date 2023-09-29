@@ -14,6 +14,59 @@ public class UsuarioContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        var usuario = modelBuilder.Entity<Usuario>();
+        var endereco = modelBuilder.Entity<Endereco>();
+        var documento = modelBuilder.Entity<Documento>();
+
+        usuario
+            .Property(u => u.nome_completo)
+            .HasMaxLength(100)
+            .IsRequired();
+        
+        usuario
+            .Property(u => u.telefone)
+            .IsFixedLength()
+            .HasMaxLength(13)
+            .IsRequired();
+
+        usuario
+            .Property(u => u.email)
+            .HasMaxLength(100)
+            .IsRequired();
+
+        usuario
+            .Property(u => u.senha)
+            .HasMaxLength(100)
+            .IsRequired();
+        
+        usuario
+            .Property(u => u.cpf)
+            .HasMaxLength(100)
+            .IsRequired();
+        
+        usuario
+            .Property(u => u.status)
+            .IsRequired();
+        
+        usuario
+            .Property(u => u.senha)
+            .HasMaxLength(100)
+            .IsRequired();
+        
+        usuario
+            .Property(u => u.senha)
+            .HasMaxLength(100)
+            .IsRequired();
+        
+
+
+        
+
+
+
+
+
+
         modelBuilder.Entity<Usuario>()
             .HasData(
                 new Usuario()
