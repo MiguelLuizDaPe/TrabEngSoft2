@@ -10,7 +10,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<UsuarioContext>(options => options.UseNpgsql("Host=localhost;Database=freeferry;Username=postgres;Password=123456"));//pro curso o username é postgres e em casa é miguel
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
+builder.Services.AddDbContext<UsuarioContext>(options => options.UseNpgsql(
+    "Host=localhost;Database=freeferry;Username=postgres;Password=123456"
+));//pro curso o username é postgres e em casa é miguel
 
 
 var app = builder.Build();

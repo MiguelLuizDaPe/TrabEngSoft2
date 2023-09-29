@@ -30,6 +30,32 @@ public class UsuarioContext : DbContext
                     local_moradia = "ali po kkkk",
                     categoria = false,
                     motociclista = true,
+                    endereco = new Endereco(){
+                        endereco_id = 1,
+                        cep = "122345543",
+                        estado = "ali",
+                        cidade = "nages",
+                        bairro = "pipi",
+                        logradouro = "kkkk perto",
+                        complemento = "legal",
+                        usuario_id = 1
+                    },
+                    documentos = new List<Documento>(){
+                        new Documento(){
+                            documento_id = 1,
+                            nome = "pedro",
+                            url = "aaaaaaaaaaaaaaaaaaaa",
+                            passe = false,
+                            usuario_id = 1
+                        },
+                        new Documento(){
+                            documento_id = 2,
+                            nome = "pedra",
+                            url = "bb",
+                            passe = false,
+                            usuario_id = 1
+                        }
+                    }
                 });
 
 
