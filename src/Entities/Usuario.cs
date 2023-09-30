@@ -36,6 +36,7 @@ public class Usuario{
 
     public bool motociclista {get;set;}
 
+    public int endereco_id {get;set;}
     public Endereco? endereco {get;set;}
     public List<Documento> documentos {get;set;} = new();
 }
